@@ -143,6 +143,17 @@
     "ntp": true,
     "packages": [
         "ghostty"
+        "niri"
+        "lxqt-polkit"
+        "neovim"
+        "pavucontrol"
+        "thunar"
+        "starship"
+        "wl-clipboard"
+        "grimblast"
+        "waybar"
+        "ttf-jetbrains-mono-nerd"
+        "brightnessctl"
     ],
     "parallel_downloads": 0,
     "profile_config": {
