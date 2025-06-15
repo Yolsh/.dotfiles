@@ -143,13 +143,12 @@
     "packages": [
         "ghostty",
         "niri",
-        "lxqt-polkit",
         "neovim",
         "pavucontrol",
         "thunar",
         "starship",
         "wl-clipboard",
-        "grimblast",
+        "grimshot",
         "waybar",
         "ttf-jetbrains-mono-nerd",
         "brightnessctl"
