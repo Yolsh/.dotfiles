@@ -14,7 +14,6 @@
         "config_type": "default_layout",
         "device_modifications": [
             {
-                "device": "/dev/nvme0n1",
                 "partitions": [
                     {
                         "btrfs": [],
