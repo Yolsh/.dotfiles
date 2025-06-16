@@ -168,7 +168,7 @@ echo -ne "
 if [[ ! -d "/sys/firmware/efi" ]]; then
     grub-install --boot-directory=/mnt/boot ${DISK}
 else
-    bootctl install # probably need to create kernel files and etc
+    bootctl install --esp-path=/mnt/boot # probably need to create kernel files and etc
 fi
 echo -ne "
 -------------------------------------------------------------------------
