@@ -10,7 +10,8 @@
         "linux"
     ],
     "custom_commands": [
-        "cd /home/yolsh; git clone https://github.com/Yolsh/.dotfiles; cp -r .dotfiles/* .config/"
+        "git clone https://aur.archlinux.org/paru.git; cd paru; makepkg -si",
+        "su yolsh; cd ~; git clone https://github.com/Yolsh/.dotfiles; cp -r .dotfiles/* .config/"
     ],
     "locale_config": {
         "kb_layout": "uk",
