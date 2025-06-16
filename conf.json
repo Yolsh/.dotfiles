@@ -9,7 +9,7 @@
     "kernels": [
         "linux"
     ],
-    "custom-commands": [
+    "custom_commands": [
         "cd /home/yolsh; git clone https://github.com/Yolsh/.dotfiles; cp -r .dotfiles/* .config/"
     ],
     "locale_config": {
