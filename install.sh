@@ -26,11 +26,11 @@ echo -ne "
     ( bash $SCRIPT_DIR/scripts/startup.sh )|& tee startup.log
       source $CONFIGS_DIR/setup.conf
     ( bash $SCRIPT_DIR/scripts/preinstall.sh )|& tee preinstall.log
-    ( arch-chroot /mnt $HOME/ArchTitus/scripts/setup.sh )|& tee setup.log
+    ( arch-chroot /mnt $HOME/YArch/scripts/setup.sh )|& tee setup.log
     if [[ ! $DESKTOP_ENV == server ]]; then
-      ( arch-chroot /mnt /usr/bin/runuser -u $USERNAME -- /home/$USERNAME/ArchTitus/scripts/user.sh )|& tee user.log
+      ( arch-chroot /mnt /usr/bin/runuser -u $USERNAME -- /home/$USERNAME/YArch/scripts/user.sh )|& tee user.log
     fi
-    ( arch-chroot /mnt $HOME/ArchTitus/scripts/post-setup.sh )|& tee post-setup.log
+    ( arch-chroot /mnt $HOME/YArch/scripts/post-setup.sh )|& tee post-setup.log
     cp -v *.log /mnt/home/$USERNAME
 
 echo -ne "
