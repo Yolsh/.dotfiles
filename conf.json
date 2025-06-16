@@ -10,7 +10,7 @@
         "linux"
     ],
     "custom_commands": [
-        "git clone https://aur.archlinux.org/paru.git; cd paru; makepkg -si",
+        "su yolsh; cd ~; git clone https://aur.archlinux.org/paru.git; cd paru; makepkg -si",
         "su yolsh; cd ~; git clone https://github.com/Yolsh/.dotfiles; cp -r .dotfiles/* .config/"
     ],
     "locale_config": {
