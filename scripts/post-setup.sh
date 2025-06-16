@@ -22,7 +22,8 @@ GRUB EFI Bootloader Install & Check
 source ${HOME}/YArch/dotfiles/setup.conf
 
 if [[ -d "/sys/firmware/efi" ]]; then
-    grub-install --efi-directory=/boot ${DISK}
+    bootctl install
+    # grub-install --efi-directory=/boot ${DISK}
 fi
 
 echo -ne "
