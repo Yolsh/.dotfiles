@@ -23,7 +23,8 @@ source ${HOME}/YArch/dotfiles/setup.conf
 
 if [[ -d "/sys/firmware/efi" ]]; then
     bootctl install
-    # grub-install --efi-directory=/boot ${DISK}
+    cp ${HOME}/YArch/setups/systemd-boot/loader.conf /boot/loader/
+    cp ${HOME}/YArch/setups/systemd-boot/entries/* /boot/loader/entries/
 fi
 
 # echo -ne "
@@ -105,11 +106,11 @@ echo -ne "
 -------------------------------------------------------------------------
 "
 
-SNAPPER_CONF="$HOME/YArch/dotfiles/snapper/root"
+SNAPPER_CONF="$HOME/YArch/setups/snapper/root"
 mkdir -p /etc/snapper/configs/
 cp -rfv ${SNAPPER_CONF} /etc/snapper/configs/
 
-SNAPPER_CONF_D="$HOME/YArch/dotfiles/snapper/snapper"
+SNAPPER_CONF_D="$HOME/YArch/setups/snapper/snapper"
 mkdir -p /etc/conf.d/
 cp -rfv ${SNAPPER_CONF_D} /etc/conf.d/
 
