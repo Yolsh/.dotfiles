@@ -1,0 +1,3 @@
+fzf
+ttf-jetbrains-mono-nerd
+starship

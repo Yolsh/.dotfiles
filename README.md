@@ -2,8 +2,8 @@
 ```
 iwctl (if not connected to internet)
 pacman -Sy git
-git clone https://github.com/Yolsh/.dotfiles
-archinstall --config .dotfiles/conf.json --creds .dotfiles/creds.json
+git clone https://github.com/Yolsh/YArch
+YArch/install.sh
 ```
 
 # To Do:
