@@ -20,7 +20,7 @@ Installing AUR Softwares
 "
 source $HOME/YArch/dotfiles/setup.conf
 
-sed ~/YArch/pkg-files/${DESKTOP_ENV}.txt | while read line
+sed -n '/'$INSTALL_TYPE'/q;p' ~/YArch/pkg-files/${DESKTOP_ENV}.txt | while read line
 do
   echo "INSTALLING: ${line}"
   sudo pacman -S --noconfirm --needed ${line}
@@ -31,7 +31,7 @@ git clone "https://aur.archlinux.org/$AUR_HELPER.git"
 cd ~/$AUR_HELPER
 makepkg -si --noconfirm
 # install aur packages
-sed ~/YArch/pkg-files/aur-pkgs.txt | while read line
+sed -n '/'$INSTALL_TYPE'/q;p' ~/YArch/pkg-files/aur-pkgs.txt | while read line
 do
   echo "INSTALLING: ${line}"
   $AUR_HELPER -S --noconfirm --needed ${line}
