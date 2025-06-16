@@ -323,7 +323,7 @@ desktopenv () {
 # language (){}
 
 # Starting functions
-# background_checks
+background_checks
 clear
 logo
 userinfo
