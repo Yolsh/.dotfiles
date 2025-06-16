@@ -50,7 +50,7 @@ $AUR_HELPER -S --noconfirm --needed lightdm-webkit2-theme-glorious
 sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter #\1/ #\2g' /etc/lightdm/lightdm.conf
 
 # applying themes
-cp -r ~/YArch/dotfiles/ ~/.config/
+cp ~/YArch/dotfiles/* ~/.config/
 
 echo -ne "
 -------------------------------------------------------------------------
