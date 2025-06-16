@@ -5,101 +5,14 @@
         "audio": "pipewire"
     },
     "bootloader": "Systemd-boot",
-    "custom_commands": [],
-    "disk_config": {
-        "btrfs_options": {
-            "snapshot_config": {
-                "type": "Snapper"
-            }
-        },
-        "config_type": "default_layout",
-        "device_modifications": [
-            {
-                "partitions": [
-                    {
-                        "btrfs": [],
-                        "dev_path": null,
-                        "flags": [
-                            "boot",
-                            "esp"
-                        ],
-                        "fs_type": "fat32",
-                        "mount_options": [],
-                        "mountpoint": "/boot",
-                        "obj_id": "fad85a83-ae25-4542-8048-4af68acd0b4a",
-                        "size": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "GiB",
-                            "value": 1
-                        },
-                        "start": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "MiB",
-                            "value": 1
-                        },
-                        "status": "create",
-                        "type": "primary"
-                    },
-                    {
-                        "btrfs": [
-                            {
-                                "mountpoint": "/",
-                                "name": "@"
-                            },
-                            {
-                                "mountpoint": "/home",
-                                "name": "@home"
-                            },
-                            {
-                                "mountpoint": "/var/log",
-                                "name": "@log"
-                            },
-                            {
-                                "mountpoint": "/var/cache/pacman/pkg",
-                                "name": "@pkg"
-                            }
-                        ],
-                        "dev_path": null,
-                        "flags": [],
-                        "fs_type": "btrfs",
-                        "mount_options": [
-                            "nodatacow"
-                        ],
-                        "mountpoint": null,
-                        "obj_id": "159bbbe6-83fe-403a-a4fe-68bae721e906",
-                        "size": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "B",
-                            "value": 254984323072
-                        },
-                        "start": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "B",
-                            "value": 1074790400
-                        },
-                        "status": "create",
-                        "type": "primary"
-                    }
-                ],
-                "wipe": true
-            }
-        ]
-    },
     "hostname": "epsilon",
     "kernels": [
         "linux"
+    ],
+    "custom-commands": [
+        "cd /home/yolsh",
+        "git clone https://github.com/Yolsh/.dotfiles",
+        "cp -r .dotfiles/* .config/"
     ],
     "locale_config": {
         "kb_layout": "uk",
@@ -151,7 +64,8 @@
         "wl-clipboard",
         "waybar",
         "ttf-jetbrains-mono-nerd",
-        "brightnessctl"
+        "brightnessctl",
+        "git"
     ],
     "parallel_downloads": 0,
     "profile_config": {
