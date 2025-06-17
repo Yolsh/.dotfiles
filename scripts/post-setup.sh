@@ -87,7 +87,6 @@ echo -ne "
 
 mkdir -p /usr/share/plymouth/themes
 echo 'Installing Plymouth theme...'
-paru -Sy plymouth-git
 cp -rf ${HOME}/YArch/setups/plymouth/cross_hud /usr/share/plymouth/themes
 if [[ $FS == "luks" ]]; then
   sed -i 's/HOOKS=(base udev*/& plymouth/' /etc/mkinitcpio.conf # add plymouth after base udev
