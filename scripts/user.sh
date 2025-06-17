@@ -47,7 +47,7 @@ echo -ne "
 
 # applying themes
 mkdir ~/.config/
-cp ~/YArch/dotfiles/* ~/.config/
+cp -r ~/YArch/dotfiles/* ~/.config/
 
 echo -ne "
 -------------------------------------------------------------------------
