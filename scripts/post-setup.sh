@@ -35,7 +35,6 @@ echo -ne "
 
 if [[ ! "${DESKTOP_ENV}" == "server"  ]]; then
     sudo pacman -S --noconfirm --needed lightdm lightdm-gtk-greeter
-    paru -S --noconfirm --needed lightdm-webkit2-theme-glorious
     # Set default lightdm greeter to lightdm-webkit2-greeter
     sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter #\1/ #\2g' /etc/lightdm/lightdm.conf
     systemctl enable lightdm.service
