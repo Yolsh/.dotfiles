@@ -77,7 +77,7 @@ echo -ne "
 -------------------------------------------------------------------------
 "
 # installing each package in the pacman file
-sed -n '/'$INSTALL_TYPE'/q;p' $HOME/YArch/pkg-files/pacman-pkgs.txt | while read line
+sed -n 'p' $HOME/YArch/pkg-files/pacman-pkgs.txt | while read line
 do
 echo "INSTALLING: ${line}"
 sudo pacman -S --noconfirm --needed ${line}

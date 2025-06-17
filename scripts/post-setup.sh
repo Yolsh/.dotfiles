@@ -35,6 +35,9 @@ echo -ne "
 
 if [[ ! "${DESKTOP_ENV}" == "server"  ]]; then
     sudo pacman -S --noconfirm --needed lightdm lightdm-gtk-greeter
+    $AUR_HELPER -S --noconfirm --needed lightdm-webkit2-theme-glorious
+    # Set default lightdm greeter to lightdm-webkit2-greeter
+    sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter #\1/ #\2g' /etc/lightdm/lightdm.conf
     systemctl enable lightdm.service
 fi
 
@@ -81,18 +84,18 @@ echo -ne "
                Enabling (and Theming) Plymouth Boot Splash
 -------------------------------------------------------------------------
 "
-PLYMOUTH_THEMES_DIR="$HOME/YArch/dotfiles/usr/share/plymouth/themes"
-PLYMOUTH_THEME="arch-glow" # can grab from config later if we allow selection
+
 mkdir -p /usr/share/plymouth/themes
 echo 'Installing Plymouth theme...'
-cp -rf ${PLYMOUTH_THEMES_DIR}/${PLYMOUTH_THEME} /usr/share/plymouth/themes
+paru -Sy plymouth-git
+cp -rf ${HOME}/YArch/setups/plymouth/cross_hud /usr/share/plymouth/themes
 if [[ $FS == "luks" ]]; then
   sed -i 's/HOOKS=(base udev*/& plymouth/' /etc/mkinitcpio.conf # add plymouth after base udev
   sed -i 's/HOOKS=(base udev \(.*block\) /&plymouth-/' /etc/mkinitcpio.conf # create plymouth-encrypt after block hook
 else
   sed -i 's/HOOKS=(base udev*/& plymouth/' /etc/mkinitcpio.conf # add plymouth after base udev
 fi
-plymouth-set-default-theme -R arch-glow # sets the theme and runs mkinitcpio
+plymouth-set-default-theme -R cross_hud # sets the theme and runs mkinitcpio
 echo 'Plymouth theme installed'
 
 echo -ne "
