@@ -35,7 +35,7 @@ echo -ne "
 
 if [[ ! "${DESKTOP_ENV}" == "server"  ]]; then
     sudo pacman -S --noconfirm --needed lightdm lightdm-gtk-greeter
-    $AUR_HELPER -S --noconfirm --needed lightdm-webkit2-theme-glorious
+    paru -S --noconfirm --needed lightdm-webkit2-theme-glorious
     # Set default lightdm greeter to lightdm-webkit2-greeter
     sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter #\1/ #\2g' /etc/lightdm/lightdm.conf
     systemctl enable lightdm.service
@@ -63,6 +63,7 @@ systemctl enable avahi-daemon.service
 echo "  Avahi enabled"
 
 localectl --no-ask-password set-keymap uk
+echo "  set keymap to uk"
 
 if [[ "${FS}" == "luks" || "${FS}" == "btrfs" ]]; then
 echo -ne "
