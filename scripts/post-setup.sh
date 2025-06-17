@@ -62,9 +62,6 @@ echo "  Bluetooth enabled"
 systemctl enable avahi-daemon.service
 echo "  Avahi enabled"
 
-localectl --no-ask-password set-keymap uk
-echo "  set keymap to uk"
-
 if [[ "${FS}" == "luks" || "${FS}" == "btrfs" ]]; then
 echo -ne "
 -------------------------------------------------------------------------
