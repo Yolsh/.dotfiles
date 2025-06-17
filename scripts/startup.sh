@@ -244,19 +244,6 @@ case ${options[$?]} in
     *) echo "Wrong option. Try again";timezone;;
 esac
 }
-# @description Set user's keyboard mapping. 
-keymap () {
-echo -ne "
-Please select key board layout from this list"
-# These are default key maps as presented in official arch repo archinstall
-options=(us by ca cf cz de dk es et fa fi fr gr hu il it lt lv mk nl no pl ro ru sg ua uk)
-
-select_option $? 4 "${options[@]}"
-keymap=${options[$?]}
-
-echo -ne "Your key boards layout: ${keymap} \n"
-set_option KEYMAP $keymap
-}
 
 # @description Choose whether drive is SSD or not.
 drivessd () {
@@ -337,4 +324,3 @@ clear
 logo
 filesystem
 set_option TIMEZONE "Europe/London"
-set_option KEYMAP "uk"
