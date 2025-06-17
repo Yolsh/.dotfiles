@@ -1,3 +1,2 @@
 zen-browser-bin
 plymouth-git
-lightdm-webkit2-theme-glorious
