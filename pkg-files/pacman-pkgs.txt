@@ -8,3 +8,4 @@ eza
 lazygit
 yazi
 ripgrep
+man-db

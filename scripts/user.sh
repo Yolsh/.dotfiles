@@ -30,6 +30,8 @@ cd ~
 git clone "https://aur.archlinux.org/paru.git"
 cd ~/paru
 makepkg -si --noconfirm
+cd ~
+rm -rf paru
 # install aur packages
 cat ~/YArch/pkg-files/aur-pkgs.txt | while read line
 do
@@ -48,6 +50,13 @@ echo -ne "
 # applying themes
 mkdir ~/.config/
 cp -r ~/YArch/dotfiles/* ~/.config/
+git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme.git
+Gruvbox-GTK-Theme/themes/install.sh
+rm -rf Gruvbox-GTK-Theme
+git clone https://github.com/SylEleuth/gruvbox-plus-icon-pack.git
+cp -r gruvbox-plus-icon-pack/Gruvbox-Plus-Dark ~/.icons
+rm -rf gruvbox-plus-icon-pack
+cp -r ~/YArch/setups/cursor/WhiteSur-cursors ~/.icons
 
 echo -ne "
 -------------------------------------------------------------------------

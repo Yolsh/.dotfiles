@@ -112,7 +112,7 @@ sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
 rm -r $HOME/YArch
 rm -r /home/$USERNAME/YArch
-rm $HOME/.config/setup.conf
+rm /home/$USERNAME/.config/setup.conf
 
 # Replace in the same state
 cd $pwd
