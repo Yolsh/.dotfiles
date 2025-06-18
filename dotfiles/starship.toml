@@ -3,7 +3,7 @@
 add_newline = true
 palette = "my_gruv"
 
-format = "[ ](bg:grad_1)[ ](bg:grad_2)[ ](bg:grad_3)[ ](bg:grad_4)[ ](bg:grad_5)[ ](bg:grad_6)[ ](bg:grad_7)$username[](bg:or_l fg:or_d)$time[](bg:purp_d fg:or_l)$git_branch$git_status[](bg:purp_l fg:purp_d)[$golang$dotnet$python$ocaml$zig](bg:purp_l)[](fg:purp_l)\n $nix_shell$directory$character"
+format = "[ ](bg:grad_1)[ ](bg:grad_2)[ ](bg:grad_3)[ ](bg:grad_4)[ ](bg:grad_5)[ ](bg:grad_6)[ ](bg:grad_7)$username[](bg:or_l fg:or_d)$time[](bg:purp_d fg:or_l)$git_branch$git_status[](bg:purp_l fg:purp_d)[$golang$dotnet$python$ocaml$zig](bg:purp_l)[](fg:purp_l)\n󰘧 $directory$character"
 
 [palettes.my_gruv]
 grad_1 = "#282828"

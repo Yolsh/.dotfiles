@@ -37,6 +37,7 @@ if [[ ! "${DESKTOP_ENV}" == "server"  ]]; then
     sudo pacman -S --noconfirm --needed lightdm lightdm-webkit2-greeter lightdm-webkit-theme-litarvan
     # Set default lightdm greeter to lightdm-webkit2-greeter litarvan
     cp $HOME/YArch/dotfiles/GUI/BG.png /usr/share/backgrounds/
+    rm -r /usr/share/backgrounds/gnome
     cp $HOME/YArch/setups/lightdm/* /etc/lightdm/
     systemctl enable lightdm.service
 fi
@@ -111,6 +112,7 @@ sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
 rm -r $HOME/YArch
 rm -r /home/$USERNAME/YArch
+rm $HOME/.config/setup.conf
 
 # Replace in the same state
 cd $pwd

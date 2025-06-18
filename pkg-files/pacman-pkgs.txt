@@ -1,3 +1,7 @@
 fzf
 ttf-jetbrains-mono-nerd
 starship
+fish
+fastfetch
+zoxide
+eza

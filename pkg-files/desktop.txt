@@ -1,3 +1,13 @@
 niri
 waybar
 ghostty
+pavucontrol
+thunar
+wl-clipboard
+brightnessctl
+pulseaudio
+network-manager-applet
+swaync
+mission-center
+gtk-engine-murrine
+nwg-look

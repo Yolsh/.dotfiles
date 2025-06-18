@@ -6,7 +6,3 @@ git clone https://github.com/Yolsh/YArch
 cd YArch
 ./install.sh
 ```
-
-# To Do:
- - remove all INSTALL_TYPE refrences
- - edit permissions in git
