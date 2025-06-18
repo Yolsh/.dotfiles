@@ -5,3 +5,6 @@ fish
 fastfetch
 zoxide
 eza
+lazygit
+yazi
+ripgrep
