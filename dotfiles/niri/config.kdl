@@ -439,7 +439,7 @@ binds {
     Ctrl+Alt+Delete { quit; }
 }
 
-layout-rule {
+layer-rule {
     match namespace="^hyprpaper$"
     place-within-backdrop true
 }
