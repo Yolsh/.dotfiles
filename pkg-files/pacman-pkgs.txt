@@ -9,3 +9,4 @@ lazygit
 yazi
 ripgrep
 man-db
+bat

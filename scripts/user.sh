@@ -51,13 +51,15 @@ echo -ne "
 mkdir ~/.config/
 cp -r ~/YArch/dotfiles/* ~/.config/
 
-git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme.git
-Gruvbox-GTK-Theme/themes/install.sh
-rm -rf Gruvbox-GTK-Theme
-git clone https://github.com/SylEleuth/gruvbox-plus-icon-pack.git ~/.icons
-ln -s ~/.icons/gruvbox-plus-icon-pack/Gruvbox-Plus-Dark ~/.icons/Gruvbox-Plus-Dark 
-rm -rf gruvbox-plus-icon-pack
-cp -r ~/YArch/setups/cursor/WhiteSur-cursors ~/.icons
+if [[ ! $DESKTOP_ENV == "server" ]] then
+    git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme.git
+    Gruvbox-GTK-Theme/themes/install.sh
+    rm -rf Gruvbox-GTK-Theme
+    git clone https://github.com/SylEleuth/gruvbox-plus-icon-pack.git ~/.icons
+    ln -s ~/.icons/gruvbox-plus-icon-pack/Gruvbox-Plus-Dark ~/.icons/Gruvbox-Plus-Dark 
+    rm -rf gruvbox-plus-icon-pack
+    cp -r ~/YArch/setups/cursor/WhiteSur-cursors ~/.icons
+fi
 
 echo -ne "
 -------------------------------------------------------------------------

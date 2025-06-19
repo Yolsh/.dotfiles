@@ -11,3 +11,5 @@ swaync
 mission-center
 gtk-engine-murrine
 nwg-look
+hyprpaper
+hyprlock
