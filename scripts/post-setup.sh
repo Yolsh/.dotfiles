@@ -34,12 +34,9 @@ echo -ne "
 "
 
 if [[ ! "${DESKTOP_ENV}" == "server"  ]]; then
-    sudo pacman -S --noconfirm --needed lightdm lightdm-webkit2-greeter lightdm-webkit-theme-litarvan
-    # Set default lightdm greeter to lightdm-webkit2-greeter litarvan
-    cp $HOME/YArch/dotfiles/GUI/BG.png /usr/share/backgrounds/
-    rm -r /usr/share/backgrounds/gnome
-    cp $HOME/YArch/setups/lightdm/* /etc/lightdm/
-    systemctl enable lightdm.service
+    sudo pacman -S --noconfirm --needed greetd-tuigreet
+    cp $HOME/YArch/setups/greetd/config.toml /etc/greetd/
+    systemctl enable greetd.service
 fi
 
 echo -ne "
